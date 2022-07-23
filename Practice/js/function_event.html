@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Events</title>
+</head>
+<body>
+	<!-- onclick function -->
+	<!-- <input type="text" class="text" name="">
+	<input type="submit" class="submit" value="submit" onclick="myFunction()" />
+	<input type="button" class="button" value="submit" onclick="myFunction1()" />
+	<h1 id="length"></h1>
+	<h1 id="type"></h1> -->
+
+<!-- <script type="text/javascript">
+	function myFunction(){
+		var x = document.getElementsByClassName('submit').length;
+		if(x>1){
+			document.getElementById("length").innerHTML = "there are " + x + " classes used here <br>";
+		}
+		else{
+			document.getElementById("length").innerHTML = "there is only " + x + " class used here <br>";
+		}
+	}
+	function myFunction1(){
+		var x = document.getElementsByTagName('input').length;
+		document.getElementById("type").innerHTML = "there are " + x + " same Tag type used here";
+	}
+</script> -->
+<!-- onclick function Ends -->
+
+<!-- onMouse function -->
+	
+	<img src="pic_bulboff.gif" id="bulb_img" onmouseover="bulbOn()" onmouseout="bulbOff()" style="width:140px;display: block;margin-bottom: 30px;">
+	<input type="submit" value="Bulb On" onclick="bulbOn()">
+	<input type="submit" value="Bulb Off" onclick="bulbOff()">
+
+	<script type="text/javascript">
+		function bulbOn(){
+			var imgSrc = document.getElementById('bulb_img');
+			imgSrc.src = "pic_bulbon.gif";
+		}
+		function bulbOff(){
+			var imgSrc = document.getElementById('bulb_img');
+			imgSrc.src = "pic_bulboff.gif";			
+		}
+	</script>
+<!-- onMouse function Ends -->
+</html>
+
+

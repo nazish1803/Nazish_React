@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Small Calc</title>
+</head>
+<body>
+<table>
+  <h1>Online Calculator</h1>
+  <tr>
+	<td>Enter a first number : </td>
+	<td><input type="text" id="firstNumber"  required /></td>
+  </tr>
+  <tr>
+	<td>Enter a second number : </td>
+	<td><input type="text" id="secondNumber" required /></td>
+  </tr>
+</table>
+<br/>
+<button onclick="add()">Add</button>
+<button onclick="sub()">Substract</button>
+<button onclick="div()">Divide</button><br/>
+<p id="result">Result</p>
+
+<script type="text/javascript">
+
+function getValue(firstNumber, secondNumber){
+	x = document.getElementById("firstNumber").value;
+	y = document.getElementById("secondNumber").value;
+}
+function add() {
+	getValue();
+	sum=Number(x)+Number(y);
+	document.getElementById("result").innerHTML =  x+" + "+y+" = "+sum;
+}
+
+function sub() {
+	getValue();
+	sub=Number(x)-Number(y);
+	document.getElementById("result").innerHTML = x+" - "+y+" = "+sub;
+}
+function div() {
+	getValue();
+	div=Number(x)/Number(y);
+	document.getElementById("result").innerHTML = x+" / "+y+" = "+div;
+}
+</script>
+
+</body>
+</html>

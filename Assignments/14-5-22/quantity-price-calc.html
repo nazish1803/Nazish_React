@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculate Price for Quantity</title>
+	<style type="text/css">
+		table{border: 1px solid #333;color: #333;border-collapse: collapse;}
+		td{
+			padding: 10px 20px;
+			vertical-align: middle;
+			border: 1px solid #ccc;
+		}
+		th{border: 1px solid #ccc;padding: 10px 20px;}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<th>Quantity</th>
+			<th>Price</th>
+			<th>Sub Total</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="number" name="" value="1" id="qnty" min="1"></td>
+				<td><div class="money">$<span id="price">20</span></div></td>
+				<td>$<span id="subtotal">20</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		document.getElementById('qnty').addEventListener("keyup",subTotal);
+		function subTotal(){
+			let quantity = document.getElementById('qnty').value;
+			let price = parseInt(document.getElementById('price').innerHTML);
+			let subtotal_price = quantity * price;
+			document.getElementById('subtotal').innerHTML = subtotal_price;
+		}
+
+	</script>
+
+</body>
+</html>

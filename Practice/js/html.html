@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Style 1</title>
+</head>
+<body>
+	<h1 id="naz" style="color: #333;">This is style given by javascript function</h1>
+</body>
+<script type="text/javascript">
+
+	var a=10;
+	let b= 20;
+	{
+	let b=9;
+	document.write(a+b);
+	}
+	document.write(a-b + '<br>');
+	var txt = "Hello";
+	var a = 10;
+	document.getElementById('naz').innerHTML = txt;
+
+	var x,y;
+	x = 102;
+	y = 2;
+	function plus(){
+		x+=y;
+		document.write(x +'<br>');
+	}
+	plus();
+	function module(){
+		y%=x;
+		document.write(y +'<br>');
+	}
+	module();
+	function comparision(){
+		let a = 10;
+		var b ="10";
+		if(a===b){
+			document.write('True <br>');
+		}
+		else{
+			document.write('False <br>');
+		}
+	}
+	comparision();
+
+	function condition_if(){
+		var a,b,c;
+		a=10;
+		b=12;
+		c=3;
+		if(a>b && a>c){
+			document.write("a is greater than b and c");
+		}
+		else if(b>a && b>c){
+			document.write("b is greater than a and c");
+		}
+		else{
+			document.write("condition_if");	
+		}
+	}
+	condition_if();
+</script>
+</html>

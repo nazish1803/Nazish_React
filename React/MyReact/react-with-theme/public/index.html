@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>React with Theme</title>
+  <script
+    type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+  <link href="%PUBLIC_URL%/css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <!-- CSS -->
+  <link href="%PUBLIC_URL%/css/style.css" rel='stylesheet' type='text/css' />
+  <link href="%PUBLIC_URL%css/font-awesome.css" rel="stylesheet">
+  <link href='%PUBLIC_URL%css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css' />
+ <!--webfonts-->
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext"
+    rel="stylesheet">
+
+  <!-- Metis Menu -->
+  
+  <link href="%PUBLIC_URL%css/custom.css" rel="stylesheet">
+  <link href="%PUBLIC_URL%css/owl.carousel.css" rel="stylesheet">
+</head>
+
+<body class="cbp-spmenu-push">
+  <div id="root">
+  </div>
+
+  <!-- JS -->
+  <script src="%PUBLIC_URL%js/jquery-1.11.1.min.js"></script>
+  <script src="%PUBLIC_URL%js/modernizr.custom.js"></script>
+  <script src="%PUBLIC_URL%js/metisMenu.min.js"></script>
+  <script src="%PUBLIC_URL%js/custom.js"></script> 
+ <script src="%PUBLIC_URL%js/owl.carousel.js"></script>
+ <script>
+   $(document).ready(function () {
+     $("#owl-demo").owlCarousel({
+       items: 3,
+       lazyLoad: true,
+       autoPlay: true,
+       pagination: true,
+       nav: true,
+     });
+   });
+ </script>
+  <script src="%PUBLIC_URL%js/classie.js"></script>
+  <script src='%PUBLIC_URL%js/SidebarNav.min.js' type='text/javascript'></script>
+  <script>
+    window.onload = function () {
+    const menuLeft = document.getElementById('cbp-spmenu-s1'),
+      showLeftPush = document.getElementById('showLeftPush'),
+      body = document.body;
+      console.log(showLeftPush);
+    showLeftPush.onclick = function () {
+      classie.toggle(this, 'active');
+      classie.toggle(body, 'cbp-spmenu-push-toright');
+      classie.toggle(menuLeft, 'cbp-spmenu-open');
+      disableOther('showLeftPush');
+    };
+    function disableOther(button) {
+      if (button !== 'showLeftPush') {
+        classie.toggle(showLeftPush, 'disabled');
+      }
+    }
+    $('.sidebar-menu').SidebarNav()
+  }
+  </script>
+   <!--scrolling js-->
+   <!-- <script src="%PUBLIC_URL%js/jquery.nicescroll.js"></script> -->
+   <script src="%PUBLIC_URL%js/scripts.js"></script>
+   <!--//scrolling js-->
+   <!-- side nav js -->
+   
+   <!-- //side nav js -->
+   
+  <!-- Bootstrap Core JavaScript -->
+  <script src="%PUBLIC_URL%/js/bootstrap.js"> </script>
+</body>
+
+</html>

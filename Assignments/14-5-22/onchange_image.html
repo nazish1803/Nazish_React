@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Events</title>
+</head>
+<body>
+	
+	<img src="pic_bulboff.gif" id="bulb_img" style="width:140px;display: block;margin-bottom: 30px;">
+	<label><input type="checkbox" value="" id="switch"><span>Switch on</span></label>
+
+	<script type="text/javascript">
+		document.getElementById("switch").addEventListener("change",mySwitch);
+		function mySwitch(){
+			let x = document.getElementById("switch");
+			if(x.checked){
+				var imgSrc = document.getElementById('bulb_img');
+				imgSrc.src = "pic_bulbon.gif";
+				x.nextSibling.innerHTML = 'Switch off';
+			}
+			else{
+				var imgSrc = document.getElementById('bulb_img');
+				imgSrc.src = "pic_bulboff.gif";			
+				x.nextSibling.innerHTML = 'Switch on';
+			}
+		}
+		
+	</script>
+<!-- onMouse function Ends -->
+</html>
+
+
