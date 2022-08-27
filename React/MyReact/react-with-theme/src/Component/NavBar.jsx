@@ -37,8 +37,8 @@ function NavBar() {
                                     </Link >
                                 </li>
                                 <li className="treeview">
-                                    <Link to="/form">
-                                        <i className="fa fa-edit" /> <span>Form</span>
+                                    <Link to="/add-customer">
+                                        <i className="fa fa-edit" /> <span>Add Customer</span>
                                     </Link >
                                 </li>
                                 <li className="treeview">

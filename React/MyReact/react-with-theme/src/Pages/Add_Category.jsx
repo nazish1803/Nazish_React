@@ -4,6 +4,7 @@ import NavBar from '../Component/NavBar'
 
 function Add_Category() {
     const[formvalue,setformvalue]=useState({
+        id:new Date().getTime().toString(),
         categoryName:"",
         categoryDescription:"",
         categoryImage:""
@@ -12,23 +13,27 @@ function Add_Category() {
     const[alldata,setalldata]=useState([]);
 
     function ChangeHandle(e){
-        setformvalue({...formvalue,[e.target.name]:[e.target.value]})
+        setformvalue({...formvalue,[e.target.name]:[e.target.value], id:new Date().getTime().toString()});
         console.log(formvalue);
     }
     function submitHandle(e){
         e.preventDefault();
-        setalldata([...alldata,formvalue])
-        setformvalue({categoryName:"",categoryDescription:"",categoryImage:""})
+        setalldata([...alldata,formvalue]);
+        setformvalue({categoryName:"",categoryDescription:"",categoryImage:""});
         console.log(alldata);
+    }
+    function deletedata(deleteid){
+        const afterdelete = alldata.filter((item)=> item.id!= deleteid);
+        setalldata(afterdelete);
     }
   return (
     <>
             <NavBar />
             <div id="page-wrapper">
-                <div classname="main-page">
+                <div className="main-page">
 
                     <div className="panel-body widget-shadow">
-                        <form>
+                        <form method="post">
                             <div className="form-group">
                                 <label>Category Name</label>
                                 <input type="text" className="form-control"  id="name" name="categoryName" onChange={ChangeHandle} value={formvalue.categoryName} />
@@ -39,10 +44,10 @@ function Add_Category() {
                             </div>
                             <div className="form-group">
                                 <label>Category Featured Image</label>
-                                <input type="url" className="form-control" id="categoryImage" name="categoryImage" onChange={ChangeHandle} value={formvalue.categoryImage} />
+                                <input type="url" className="form-control" id="categoryimage" name="categoryImage" onChange={ChangeHandle} value={formvalue.categoryImage} />
                             </div>
                             
-                            <button type="submit" className="btn btn-default" onSubmit={submitHandle}>Submit</button>
+                            <button type="submit" className="btn btn-default" onClick={submitHandle}>Submit</button>
                         </form>
                     </div>
 
@@ -56,17 +61,19 @@ function Add_Category() {
                                         <th>Category Name</th>
                                         <th>Description</th>
                                         <th>Image</th>
+                                        <th>Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 {
                                 alldata.map((item,index)=>{
                                     return(
-                                    <tr>
-                                        <td>{index+1}</td>
+                                    <tr key={index}>
+                                        <td>{item.id}</td>
                                         <td>{item.categoryName}</td>
                                         <td>{item.categoryDescription}</td>
                                         <td><img src={item.categoryImage} width="30px" alt={item.categoryName}/></td>
+                                        <td><button onClick={()=>deletedata(item.id)}>X</button></td>
                                     </tr>
                                      )
 

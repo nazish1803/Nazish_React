@@ -7,7 +7,7 @@ function Manage_Category() {
         <>
             <NavBar />
             <div id="page-wrapper">
-                <div classname="main-page">
+                <div className="main-page">
                     <div className="panel-body widget-shadow">
 
                         <div className="tables">
