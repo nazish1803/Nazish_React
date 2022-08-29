@@ -42,6 +42,21 @@ function NavBar() {
                                     </Link >
                                 </li>
                                 <li className="treeview">
+                                    <Link to="/manage-customer">
+                                        <i className="fa fa-dashboard" /> <span>Manage Customer</span>
+                                    </Link >
+                                </li>
+                                <li className="treeview">
+                                    <Link to="/add-product">
+                                        <i className="fa fa-dashboard" /> <span>Add Product</span>
+                                    </Link >
+                                </li>
+                                <li className="treeview">
+                                    <Link to="/manage-product">
+                                        <i className="fa fa-dashboard" /> <span>Manage Product</span>
+                                    </Link >
+                                </li>
+                                <li className="treeview">
                                     <Link to="/tables">
                                         <i className="fa fa-table" /> <span>Tables</span>
                                     </Link>
