@@ -9,6 +9,7 @@ import Add_Category from './Pages/Add_Category';
 import Add_Customer from './Pages/Add_Customer';
 import Add_Product from './Pages/Add_Product';
 import Dashboard from './Pages/Dashboard'
+import Login from './Pages/Login';
 import Manage_Category from './Pages/Manage_Category';
 import Manage_Customer from './Pages/Manage_Customer';
 import Manage_Product from './Pages/Manage_Product';
@@ -27,7 +28,9 @@ function App() {
     // </div>
     <BrowserRouter>
       <Routes>
-          <Route path="/" element={<Dashboard />}/>
+          
+          <Route path='/' element={<Login/>}/>
+          <Route path="/dashboard" element={<Dashboard />}/>
           <Route path='manage-category' element={<Manage_Category/>}/>
           <Route path='add-category' element={<Add_Category/>}/>
           <Route path='add-customer' element={<Add_Customer/>}/>

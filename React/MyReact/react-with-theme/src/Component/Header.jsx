@@ -1,6 +1,25 @@
-import React from 'react'
-
+import React,{useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 function Header() {
+
+    const redirect=useNavigate();
+    useEffect(()=>{
+        if(localStorage.getItem('email'))
+        {
+
+        }
+        else{
+            alert('Login First');
+            redirect('/');
+        }
+    },[])
+        
+      function logoutHandler(e){
+        e.preventDefault();
+        localStorage.setItem("email", '');
+        localStorage.clear();
+        redirect('/');
+      }
    
     return (
         <div className="sticky-header header-section ">
@@ -190,7 +209,7 @@ function Header() {
                                 <li> <a href="#"><i className="fa fa-cog" /> Settings</a> </li>
                                 <li> <a href="#"><i className="fa fa-user" /> My Account</a> </li>
                                 <li> <a href="#"><i className="fa fa-suitcase" /> Profile</a> </li>
-                                <li> <a href="#"><i className="fa fa-sign-out" /> Logout</a> </li>
+                                <li> <a href="#" onClick={logoutHandler}><i className="fa fa-sign-out" /> Logout</a> </li>
                             </ul>
                         </li>
                     </ul>
