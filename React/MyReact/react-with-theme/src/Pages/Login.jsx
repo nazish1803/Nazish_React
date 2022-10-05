@@ -1,5 +1,5 @@
 import React, { useState }  from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 // import Footer from '../Component/Footer'
 // import NavBar from '../Component/NavBar'
 
@@ -34,7 +34,7 @@ function Login() {
                 //console.log(data);
                 if(data.registered)
                 {
-                    alert('Login Successfull');
+                  //  alert('Login Successfull');
                     localStorage.setItem('localId', data.localId);
                     localStorage.setItem('email', data.email);
                     localStorage.setItem('idToken', data.idToken);
@@ -67,12 +67,14 @@ function Login() {
                                     <div className="clearfix"> </div>
                                 </div>
                                 <input type="submit" onClick={submitHandle}  name="Sign In" defaultValue="Sign In" />
+                                
                                 <div className="registration">
                                     Don't have an account ?
-                                    <a className href="signup.html">
+                                    <a href="/signup">
                                         Create an account
                                     </a>
                                 </div>
+    
                             </form>
                         </div>
                     </div>

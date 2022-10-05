@@ -6,7 +6,7 @@ function Header() {
     useEffect(()=>{
         if(localStorage.getItem('email'))
         {
-
+            
         }
         else{
             alert('Login First');
@@ -16,7 +16,7 @@ function Header() {
         
       function logoutHandler(e){
         e.preventDefault();
-        localStorage.setItem("email", '');
+        localStorage.setItem("idToken", '');
         localStorage.clear();
         redirect('/');
       }
@@ -197,7 +197,7 @@ function Header() {
                                 <div className="profile_img">
                                     <span className="prfil-img"><img src="images/2.jpg" alt /> </span>
                                     <div className="user-name">
-                                        <p>Admin Name</p>
+                                        <p>admin</p>
                                         <span>Administrator</span>
                                     </div>
                                     <i className="fa fa-angle-down lnr" />

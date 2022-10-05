@@ -22,7 +22,7 @@ function NavBar() {
                             <ul className="sidebar-menu">
                                 <li className="header">MAIN NAVIGATION</li>
                                 <li className="treeview">
-                                    <Link to="/">
+                                    <Link to="/dashboard">
                                         <i className="fa fa-dashboard" /> <span>Dashboard</span>
                                     </Link >
                                 </li>

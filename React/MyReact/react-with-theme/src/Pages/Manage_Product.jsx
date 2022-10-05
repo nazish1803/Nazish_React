@@ -77,9 +77,9 @@ function Manage_Product() {
     <NavBar />
     <div id="page-wrapper">
         <div className="main-page">
-        <div class="table-responsive bs-example widget-shadow">
+        <div className="table-responsive bs-example widget-shadow">
 						<h4>Database Table:</h4>
-						<table class="table table-bordered">
+						<table className="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>Product Id</th>
@@ -100,10 +100,10 @@ function Manage_Product() {
                                             <td style={{"width":"30%"}}>{productDesc}</td>
                                             <td><img src={productImage} width="70px" alt={productName}/></td>
                                             <td>
-                                                <button class="btn btn-primary m-3" data-toggle="modal" data-target="#myModal" onClick={()=>editdata(item)}>Edit</button>
-                                                <button class="btn btn-danger" onClick={()=>deletedata(item)}>Delete</button>
+                                                <button className="btn btn-primary m-3" data-toggle="modal" data-target="#myModal" onClick={()=>editdata(item)}>Edit</button>
+                                                <button className="btn btn-danger" onClick={()=>deletedata(item)}>Delete</button>
                                             </td>
-                                            <td><button class="btn btn-secondary">Block</button></td>
+                                            <td><button className="btn btn-secondary">Block</button></td>
                                         </tr>
 
                                         )
@@ -114,14 +114,14 @@ function Manage_Product() {
 					</div>
         </div>
     </div>
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+    <div id="myModal" className="modal fade" role="dialog">
+        <div className="modal-dialog">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <button type="button" className="close" data-dismiss="modal">&times;</button>
+                    <h4 className="modal-title">Modal Header</h4>
                 </div>
-                    <div class="modal-body">
+                    <div className="modal-body">
                         <form method="post">
                             <div className="form-group">
                                 <label>Product Name</label>
@@ -138,8 +138,8 @@ function Manage_Product() {
                             <button type="submit" className="btn btn-default" data-dismiss="modal" onClick={saveData}>Submit</button>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div className="modal-footer">
+                    <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

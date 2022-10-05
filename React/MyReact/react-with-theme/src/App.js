@@ -13,6 +13,7 @@ import Login from './Pages/Login';
 import Manage_Category from './Pages/Manage_Category';
 import Manage_Customer from './Pages/Manage_Customer';
 import Manage_Product from './Pages/Manage_Product';
+import Signup from './Pages/Signup';
 import Table from './Pages/Table'
 import Validation from './Pages/Validation'
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='manage-customer' element={<Manage_Customer/>}/>
           <Route path='add-product' element={<Add_Product/>}/>
           <Route path='manage-product' element={<Manage_Product/>}/>
+          <Route path='signup' element={<Signup/>}/>
           <Route path='form' element={<Validation/>}/>
           <Route path='tables' element={<Table/>}/>
       </Routes>

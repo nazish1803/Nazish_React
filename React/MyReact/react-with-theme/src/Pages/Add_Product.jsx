@@ -72,9 +72,9 @@ function Add_Product() {
 
                 </div>
 
-                <div class="table-responsive bs-example widget-shadow">
+                <div className="table-responsive bs-example widget-shadow">
                     <h4 style={{"padding":"20px"}}>Database Table:</h4>
-						<table class="table table-bordered">
+						<table className="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>Product Id</th>
@@ -95,7 +95,7 @@ function Add_Product() {
                                             <td style={{"width":"30%"}}>{productDesc}</td>
                                             <td><img src={productImage} width="70px" alt={productName}/></td>
                                             <td>
-                                                <button class="btn btn-danger" onClick={()=>deletedata(item)}>Delete</button>
+                                                <button className="btn btn-danger" onClick={()=>deletedata(item)}>Delete</button>
                                             </td>
                                         </tr>
 

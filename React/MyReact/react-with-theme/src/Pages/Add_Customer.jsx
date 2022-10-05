@@ -26,6 +26,7 @@ function Add_Customer() {
             })
             .then((response) => response.json())
             .then((data) => {
+                console.log(data);
                 setformvalue({name:"",username:"",password:"",mobile:""})
                 alert("Data added successfully");
             });
