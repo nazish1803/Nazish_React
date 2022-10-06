@@ -8,12 +8,13 @@ function Signup() {
         name:"",
         email:"",
         password:"",
-        mobile:""
+        mobile:"",
+        returnSecureToken:""
     });
     const redirect=useNavigate();
 
     function ChangeHandle(e){
-        setformvalue({...formvalue,[e.target.name]:e.target.value,id:new Date().getTime().toString()});
+        setformvalue({...formvalue,[e.target.name]:e.target.value,id:new Date().getTime().toString(),returnSecureToken:true});
         console.log(formvalue);
     }
     
@@ -37,8 +38,8 @@ function Signup() {
                     },
                     })
                     .then((response) => response.json())
-                    .then((data) => {
-                       console.log(data);
+                    .then((data1) => {
+                       console.log(data1);
                         console.log("Data added successfully");
                         redirect("/");
                         setformvalue({name:"",email:"",password:"",mobile:""})

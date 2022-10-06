@@ -16,7 +16,7 @@ function Header() {
         
       function logoutHandler(e){
         e.preventDefault();
-        localStorage.setItem("idToken", '');
+        localStorage.setItem("mail", '');
         localStorage.clear();
         redirect('/');
       }
